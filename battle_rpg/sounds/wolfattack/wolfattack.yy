@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"wolfattack",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":1.0010657,
+  "exportDir":"",
+  "name":"wolfattack",
+  "parent":{
+    "name":"objects",
+    "path":"folders/objects.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"wolfattack.wav",
+  "volume":1.0,
+}
