@@ -1,3 +1,13 @@
+if(global.timerStart = true)
+{
+	global.timer++
+}
+else if (global.timerStart = false)
+{
+	global.timer = 0;
+}
+
+
 if (global.playerHealth <1 or global.enemyHealth <1)
 {
 	room_goto(gameover)
@@ -20,6 +30,8 @@ switch (global.state)
 	
 	obj_textbox.image_index = 0;
 // highlighting selected option
+instance_activate_object(obj_attackbutton);
+instance_activate_object(obj_breathbutton);
 if (selectedNumber = 0) //attack
 {
 	obj_breathbutton.sprite_index = spr_breathbutton
@@ -43,6 +55,8 @@ break;
 
 case STATES.STATUSUPDATE:
 obj_textbox.image_index = 1;
+instance_deactivate_object(obj_attackbutton);
+instance_deactivate_object(obj_breathbutton);
 
 if (global.playerHealth <5 && selectedNumber = 0)
 {
@@ -63,8 +77,11 @@ if (wasPlayerTurn)
 		obj_enemy.image_index = 1;
 		if (change)
 			{
+				global.enemyHit = true;
 			global.enemyHealth = global.enemyHealth - 1;
 				audio_play_sound(playerattack, 5, false);
+				global.timerStart = true;
+			instance_activate_object(obj_fire);
 			}
 			change = false;
 		}
@@ -72,6 +89,7 @@ if (wasPlayerTurn)
 		{
 		dialouge = 5
 		}
+		
 	}
 
 	if (selectedNumber = 1 && change = true)
@@ -105,6 +123,7 @@ if (wasPlayerTurn)
 
 if (!wasPlayerTurn)
 {
+	global.enemyHit = false;
 	dialouge = 6
 }
 
@@ -151,6 +170,7 @@ if (number < missrate && enemyWent = false)
 }
 else if (number > missrate && enemyWent = false)
 {
+	playerHit = true;
 	global.playerHealth = global.playerHealth - 2;
 			audio_play_sound(wolfattack, 5, false);
 	obj_vinnie.image_index = 1;
