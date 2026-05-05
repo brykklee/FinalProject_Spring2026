@@ -5,7 +5,7 @@ wasPlayerTurn = false;;
 
 global.playerHealth = 10;
 global.enemyHealth = 5;
-playerHit = false;
+
 
 global.enemyHit = false;
 global.timer = 0;

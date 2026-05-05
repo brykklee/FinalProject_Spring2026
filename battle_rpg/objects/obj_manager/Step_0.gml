@@ -170,7 +170,7 @@ if (number < missrate && enemyWent = false)
 }
 else if (number > missrate && enemyWent = false)
 {
-	playerHit = true;
+	instance_activate_object(obj_slash);
 	global.playerHealth = global.playerHealth - 2;
 			audio_play_sound(wolfattack, 5, false);
 	obj_vinnie.image_index = 1;
