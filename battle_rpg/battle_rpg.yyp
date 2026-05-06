@@ -39,6 +39,7 @@
     {"id":{"name":"obj_vinnie","path":"objects/obj_vinnie/obj_vinnie.yy",},},
     {"id":{"name":"gameover","path":"rooms/gameover/gameover.yy",},},
     {"id":{"name":"main","path":"rooms/main/main.yy",},},
+    {"id":{"name":"win","path":"rooms/win/win.yy",},},
     {"id":{"name":"heal","path":"sounds/heal/heal.yy",},},
     {"id":{"name":"playerattack","path":"sounds/playerattack/playerattack.yy",},},
     {"id":{"name":"select","path":"sounds/select/select.yy",},},
@@ -58,12 +59,14 @@
     {"id":{"name":"spr_textbox","path":"sprites/spr_textbox/spr_textbox.yy",},},
     {"id":{"name":"spr_vinniemain","path":"sprites/spr_vinniemain/spr_vinniemain.yy",},},
     {"id":{"name":"Sprite14","path":"sprites/Sprite14/Sprite14.yy",},},
+    {"id":{"name":"win_export","path":"sprites/win_export/win_export.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"main","path":"rooms/main/main.yy",},},
     {"roomId":{"name":"gameover","path":"rooms/gameover/gameover.yy",},},
+    {"roomId":{"name":"win","path":"rooms/win/win.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

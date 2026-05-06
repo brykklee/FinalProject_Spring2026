@@ -8,9 +8,13 @@ else if (global.timerStart = false)
 }
 
 
-if (global.playerHealth <1 or global.enemyHealth <1)
+if (global.playerHealth <1)
 {
 	room_goto(gameover)
+}
+if(global.enemyHealth <1)
+{
+	room_goto(win)
 }
 
 
@@ -77,6 +81,7 @@ if (wasPlayerTurn)
 		obj_enemy.image_index = 1;
 		if (change)
 			{
+				obj_enemy.sprite_index = spr_enemyhit
 				global.enemyHit = true;
 			global.enemyHealth = global.enemyHealth - 1;
 				audio_play_sound(playerattack, 5, false);
@@ -101,6 +106,7 @@ if (wasPlayerTurn)
 		dialouge = 1
 			if (change)
 			{
+				audio_play_sound(heal, 5, false);
 			global.paranoia = 0
 			}
 			change = false
@@ -152,6 +158,7 @@ if (global.playerHealth >4)
 break;
 
 case STATES.ENEMYTURN:
+obj_enemy.sprite_index = spr_enemy_idle
 
 number = irandom(100)
 if (global.enemyHealth <3)
